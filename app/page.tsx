@@ -1,101 +1,90 @@
+'use client'
+import TickerTape from "@/components/TicketTape";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const tickerMessages = [
+  "Welcome to The Realms of Asgard Website – Your destination for diverse server hosting!",
+  "Interested in RP? TROA RP is in its testing phase! Join our Discord and request whitelist access to get started.",
+  "We run 10 in-house servers powered by top-tier hardware.",
+  "Empyrion Reforged Eden 2 is launching – get ready for adventure!",
+  "TROA currently hosts 10 active servers. Check out the games we play and join the fun on Discord!",
+  "TROA Forge is thriving! Don't forget to vote and download our modpack at TechinPack.",
+  "Supported Games: Dayz, RUST, Arma 3, ICARUS, Empyrion, Stationeers, Astroneers, Star Citizen, Elite Dangerous, No Man's Sky, Astro Colony, Minecraft.",
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [timeRemaining, setTimeRemaining] = useState("");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 33); // Set target date to 33 days from now
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTimeRemaining("Time's up!");
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setTimeRemaining(
+        `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`
+      );
+    }, 1000);
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, []);
+
+  return (
+    <div className="flex flex-col min-h-screen text-white">
+      {/* Header */}
+      <TickerTape messages={tickerMessages} />
+
+      {/* Main Content */}
+      <main className="flex flex-1 flex-col items-center justify-center px-4 text-center">
+        <div className="mb-6">
+          <Image
+            src="/logo.png"
+            alt="The Realms of Asgard Logo"
+            width={150}
+            height={150}
+            className="mx-auto"
+          />
+        </div>
+
+        <h1 className="text-3xl font-bold">The Realms of Asgard - NPO</h1>
+        <p className="mt-4 text-lg">
+          Welcome to the TROA website, we are currently working on our new site!
+        </p>
+
+        <p className="mt-6 text-xl text-yellow-400">{timeRemaining}</p>
+
+        <div className="mt-8 flex space-x-4">
+          <Link
+            href="https://discord.gg/JadAJjVsEr"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-6 py-2 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-600"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Join our Discord
+          </Link>
+          <Link
+            href="/forums"
+            className="px-6 py-2 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-600"
           >
-            Read our docs
-          </a>
+            Visit our Forums
+          </Link>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
