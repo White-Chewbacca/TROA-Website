@@ -45,18 +45,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen text-white">
+    <div className="flex flex-col text-white">
       {/* Header */}
       <TickerTape messages={tickerMessages} />
 
       {/* Main Content */}
-      <main className="flex flex-1 flex-col items-center justify-center px-4 text-center">
+      <main className="flex flex-1 flex-col items-center justify-center px-4 text-center py-32">
         <div className="mb-6">
           <Image
             src="/logo.png"
             alt="The Realms of Asgard Logo"
-            width={150}
-            height={150}
+            width={400}
+            height={400}
             className="mx-auto"
           />
         </div>

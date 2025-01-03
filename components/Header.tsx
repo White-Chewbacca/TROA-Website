@@ -24,7 +24,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/forums" className="hover:text-yellow-400">
+            <Link href="https://forums.therealmsofasgard.com" className="hover:text-yellow-400">
               Forums
             </Link>
           </li>
