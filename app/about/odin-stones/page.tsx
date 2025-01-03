@@ -1,6 +1,5 @@
 "use client";
 import { CardStack } from "@/components/ui/card-stack";
-import { cn } from "@/lib/utils";
 export default function CardStackDemo() {
   return (
     <div className="flex flex-col items-center justify-center w-full px-6">
@@ -31,26 +30,6 @@ export default function CardStackDemo() {
   );
 }
 
-// Small utility to highlight the content of specific section of a testimonial content
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
-
 const CARDS = [
   {
     id: 0,
@@ -60,9 +39,9 @@ const CARDS = [
         The Rune of Communication emphasizes the crucial role of open and
         effective communication. It fosters an environment where dialogue is
         encouraged, bridging gaps and forming lasting connections. Practices
-        include <Highlight>Open Channels</Highlight>,
-        <Highlight>Active Listening</Highlight>, and
-        <Highlight>Conflict Resolution</Highlight>.
+        include Open Channels,
+        Active Listening, and
+        Conflict Resolution.
       </p>
     ),
     style: "w-[30rem] h-[20rem]",
@@ -74,9 +53,9 @@ const CARDS = [
       <p>
         The Rune of Honesty highlights the significance of truthfulness and
         sincerity. It nurtures an atmosphere of authenticity and trust through
-        practices like <Highlight>Transparent Leadership</Highlight>,
-        <Highlight>Sincere Feedback</Highlight>, and
-        <Highlight>Authentic Connections</Highlight>.
+        practices like Transparent Leadership,
+        Sincere Feedback, and
+        Authentic Connections.
       </p>
     ),
     style: "w-[30rem] h-[20rem]",
@@ -88,9 +67,9 @@ const CARDS = [
       <p>
         Trust forms the foundation of the TROA community. It enables
         collaboration and unity through practices such as
-        <Highlight>Collaborative Projects</Highlight>,
-        <Highlight>Accountability</Highlight>, and
-        <Highlight>Safe Spaces</Highlight>.
+        Collaborative Projects,
+        Accountability, and
+        Safe Spaces.
       </p>
     ),
     style: "w-[30rem] h-[20rem]",
@@ -101,9 +80,9 @@ const CARDS = [
     content: (
       <p>
         The Rune of Respect ensures that every member is valued and treated
-        with dignity. It promotes <Highlight>Celebrating Diversity</Highlight>,
-        <Highlight>Constructive Interaction</Highlight>, and
-        <Highlight>Recognition</Highlight> of contributions.
+        with dignity. It promotes Celebrating Diversity,
+        Constructive Interaction, and
+        Recognition of contributions.
       </p>
     ),
     style: "w-[30rem] h-[20rem]",

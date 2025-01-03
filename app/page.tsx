@@ -66,11 +66,11 @@ export default function Home() {
           Welcome to the TROA website, we are currently working on our new site!
         </p>
 
-        <p className="mt-6 text-xl text-yellow-400">{timeRemaining}</p>
+        <p className="mt-6 text-xl text-yellow-400 font-sans">{timeRemaining}</p>
 
         <div className="mt-8 flex space-x-4">
           <Link
-            href="https://discord.gg/JadAJjVsEr"
+            href="https://discord.therealmsofasgard.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-600"

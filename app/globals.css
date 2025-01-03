@@ -2,7 +2,177 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'AsgardTrial Fit Bold';
+  src: url('/fonts/AsgardTrial-FitBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Bold Backslant';
+  src: url('/fonts/AsgardTrial-FitBoldBackslant.ttf') format('truetype');
+  font-weight: bold;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Bold Italic';
+  src: url('/fonts/AsgardTrial-FitBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Fat';
+  src: url('/fonts/AsgardTrial-FitFat.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Fat Backslant';
+  src: url('/fonts/AsgardTrial-FitFatBackslant.ttf') format('truetype');
+  font-weight: 900;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Fat Italic';
+  src: url('/fonts/AsgardTrial-FitFatItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Light';
+  src: url('/fonts/AsgardTrial-FitLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Light Backslant';
+  src: url('/fonts/AsgardTrial-FitLightBackslant.ttf') format('truetype');
+  font-weight: 300;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Light Italic';
+  src: url('/fonts/AsgardTrial-FitLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Medium';
+  src: url('/fonts/AsgardTrial-FitMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Medium Backslant';
+  src: url('/fonts/AsgardTrial-FitMediumBackslant.ttf') format('truetype');
+  font-weight: 500;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Medium Italic';
+  src: url('/fonts/AsgardTrial-FitMediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Regular';
+  src: url('/fonts/AsgardTrial-FitRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Regular Backslant';
+  src: url('/fonts/AsgardTrial-FitRegularBackslant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Regular Italic';
+  src: url('/fonts/AsgardTrial-FitRegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Thin';
+  src: url('/fonts/AsgardTrial-FitThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Thin Backslant';
+  src: url('/fonts/AsgardTrial-FitThinBackslant.ttf') format('truetype');
+  font-weight: 100;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Thin Italic';
+  src: url('/fonts/AsgardTrial-FitThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xbold';
+  src: url('/fonts/AsgardTrial-FitXbold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xbold Backslant';
+  src: url('/fonts/AsgardTrial-FitXboldBackslant.ttf') format('truetype');
+  font-weight: 800;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xbold Italic';
+  src: url('/fonts/AsgardTrial-FitXboldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xlight';
+  src: url('/fonts/AsgardTrial-FitXlight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xlight Backslant';
+  src: url('/fonts/AsgardTrial-FitXlightBackslant.ttf') format('truetype');
+  font-weight: 200;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'AsgardTrial Fit Xlight Italic';
+  src: url('/fonts/AsgardTrial-FitXlightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
 body {
   @apply bg-cover bg-center text-white; /* Tailwind utilities for full background */
   background-image: url('/background_nebula.jpg');
+  font-family: 'AsgardTrial Fit Regular', sans-serif;
 }

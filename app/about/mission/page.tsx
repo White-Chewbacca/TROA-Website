@@ -4,12 +4,12 @@ export default function MissionPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white px-6">
       {/* Logo */}
-      <div className="my-8">
+      <div className="my-4">
         <Image
           src="/logo.png" // Ensure your logo is stored in the public/ directory
           alt="TROA Logo"
-          width={200}
-          height={200}
+          width={350}
+          height={350}
           className="mx-auto"
         />
       </div>
@@ -18,7 +18,7 @@ export default function MissionPage() {
       <h1 className="text-3xl font-bold text-center mb-6">Our Mission</h1>
 
       {/* Content */}
-      <div className="max-w-4xl text-center text-lg space-y-4">
+      <div className="max-w-4xl text-center text-xl space-y-4">
         <p>
           Welcome to Realms of Asgard, where gamers unite in a welcoming and
           inclusive online community. Our mission is to provide a safe and

@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="bg-black text-white">
-      <nav className="flex items-center justify-between px-6">
+      <nav className="flex items-center justify-between pl-6 pr-10 text-xl font-bold ">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="">
           <Image
                       src="/TROAExtended.png"
                       alt="The Realms of Asgard Logo"
-                      width={300}
+                      width={400}
                       height={100}
                       className="mx-auto"
                     />
@@ -29,8 +29,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link href="/status" className="hover:text-yellow-400">
+              Status
+            </Link>
+          </li>
+          <li>
             <Link
-              href="https://discord.gg/JadAJjVsEr"
+              href="https://discord.therealmsofasgard.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400"
